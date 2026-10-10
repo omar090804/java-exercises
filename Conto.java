@@ -1,38 +1,37 @@
 import java.util.Scanner;
 
 public class Conto {
-    double saldo = 0;
-    Scanner s = new Scanner(System.in);
+    private double saldo ;
+    public Conto(){
+        this.saldo=0;
+    }
 
-    public double saldo() {
+
+    public double getSaldo() {
         return saldo;
     }
 
-    public void preleva() {
-        System.out.print("Quanto devi prelevare: ");
-        double y = s.nextDouble();
-
-        if (y > 0 && y <= saldo) {
-            saldo -= y;
+    public boolean preleva(double importo) {
+        if (importo <=0 || importo > saldo) {
+            return false;
         } else {
-            System.out.println("Importo non valido o saldo insufficiente!");
+            saldo -= importo;
+            return true;
         }
     }
 
-    public void deposita() {
-        System.out.print("Quanto vuoi depositare: ");
-        double x = s.nextDouble();
-
-        if (x > 0) {
-            saldo += x;
+    public boolean deposita(double importo) {
+        if (importo > 0) {
+            saldo +=importo;
+            return true;
         } else {
-            System.out.println("Importo non valido!");
+            return false;
         }
     }
 
     public static void main(String[] args) {
         Conto c = new Conto();
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("***************");
@@ -43,15 +42,25 @@ public class Conto {
             System.out.println("***************");
 
             System.out.print("Scegli l'opzione: ");
-            int option = s.nextInt();
+            int option = scanner.nextInt();
 
             switch (option) {
-                case 1 -> System.out.println("Saldo: " + c.saldo());
-                case 2 -> c.deposita();
-                case 3 -> c.preleva();
+                case 1 -> System.out.println("Saldo: " + c.getSaldo());
+                case 2 ->{
+                    System.out.print("Quanto vuoi depositare: ");
+                    double importo = scanner.nextDouble();
+                    if (!c.deposita(importo)) {
+                        System.out.println("Importo non valido!");
+                    }
+                 c}
+                case 3 -> {System.out.print("Quanto vuoi prelevare: ");
+                    double importo = scanner.nextDouble();
+                    if (!c.preleva(importo)) {
+                        System.out.println("Importo non valido o saldo insufficiente!");
+                    }}
                 case 4 -> {
                     System.out.println("Grazie, arrivederci!");
-                    s.close();
+                    scanner.close();
                     return;
                 }
                 default -> System.out.println("Opzione non valida");
