@@ -1,6 +1,7 @@
+
 # Java Exercises
 
-This repository contains my Java exercises and small projects created while learning and improving my programming skills...
+This repository contains my Java exercises and small projects created while learning and improving my programming skills.
 
 ## Projects
 
@@ -17,7 +18,7 @@ The program:
 
 ### Bank Account
 
-A simple console application that simulates basic bank account operations...
+A simple console application that simulates basic bank account operations.
 
 The program allows the user to:
 
@@ -35,7 +36,6 @@ The program allows the user to:
 
 ## Goal
 
-The purpose of this repository is to document my progress in Java and build a solid foundation in programming and object-oriented programming...
+The purpose of this repository is to document my progress in Java and build a solid foundation in programming and object-oriented programming.
 
-
-
+Autore: Omar
