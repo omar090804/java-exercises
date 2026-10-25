@@ -44,7 +44,9 @@ It shows:
 * IntelliJ IDEA
 * Git
 * GitHub
+## Other projects
 
+* [Contact Book](https://github.com/omar090804/rubrica-java): console contact manager (ArrayList, classes)
 ## Goal
 
 The purpose of this repository is to document my progress in Java and build a solid foundation in programming and object-oriented programming.
