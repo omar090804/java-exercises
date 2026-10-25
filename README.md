@@ -26,7 +26,18 @@ The program allows the user to:
 * Deposit money
 * Withdraw money
 * Exit the application
+### Person
 
+A `Persona` class that models a person with a name and an age.
+
+It shows:
+
+* Private fields and a constructor
+* Getters
+* A `stampa()` method that prints the person's data
+* An `isMaggiorenne()` method that checks if the person is an adult
+
+`TestPersona` creates three people and prints their data and whether they are adults.
 ## Technologies
 
 * Java
