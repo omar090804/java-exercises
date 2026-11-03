@@ -5,10 +5,10 @@ public class HelloWorld {
         String helloWorld = "hello world";
         String ris = "";
 
-        for (int i = 0;ris.equals(helloWorld) ; ) {
+        for (int i = 0;!ris.equals(helloWorld) ; ) {
             if (w != helloWorld.charAt(i)) {
                 System.out.println(ris + w++);
-                Thread.currentThread().sleep(200);
+                Thread.sleep(200);
             } else {
                 i++;
                 ris += w;
@@ -19,7 +19,7 @@ public class HelloWorld {
                 i++;
             }
         }
-        System.out.println(" !");
+        System.out.print(ris+" !");
 
 
     }
