@@ -52,7 +52,7 @@ public class Conto {
                     if (!c.deposita(importo)) {
                         System.out.println("Importo non valido!");
                     }
-                 c}
+                 }
                 case 3 -> {System.out.print("Quanto vuoi prelevare: ");
                     double importo = scanner.nextDouble();
                     if (!c.preleva(importo)) {
